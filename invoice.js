@@ -83,6 +83,11 @@ $(document).ready(function () {
         while(rowCount1>1){table1.querySelectorAll("tr")[rowCount1 - 1].remove(); eachAmount();}
     }
 
+    document.getElementById("print").addEventListener('click',print);
+    function print(){
+        window.print();
+    }
+
 })
 
 

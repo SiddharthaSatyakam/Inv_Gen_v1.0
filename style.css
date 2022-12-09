@@ -3,7 +3,11 @@
     /* border-collapse: collapse; */
     font-family: calibri,arial; border-style: solid;border-color: rgb(255,0,0,1);width: 50%;max-width: 900px;
 }
-
+@media print {
+    .noprint {
+       visibility: hidden;
+    }
+}
 .center .header{
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255,0,0,1));
     color: white; 

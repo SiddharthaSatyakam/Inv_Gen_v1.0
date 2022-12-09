@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <table class="center">
+        <tr>
+            <td style="background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));padding: 15px;">
+                <table class="header">
+                    <tr class="row1">
+                        <td class="headEle" align="left">
+                            <h1 style="font-size:50px; width: 45%;">
+                                Invoice
+                            </h1>
+                        </td>
+                        <td class="headEle" style="text-align: right;width: 27%;" align="right">
+                            <p style="font-size:17px;margin: 34px 0px;">
+                                965xxxxx<br>
+                                habscbs@gmail.com <br>
+                                abshbj.com <br>
+                            </p>
+                        </td>
+                        <td class="headEle" style="text-align: right;width: 27%;" align="right">
+                            <p style="font-size:17px;padding-right: 20px;margin: 34px 0px;">
+                                Address<br>
+                                City,state,country<br>
+                                788888
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="rem" style="width:0%;">
+                    <tr>
+                        <td>
+                            <table class="billDet" style="width: 100%;">
+                                <tr style="margin: 0;">
+                                    <td class="billEle">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <p style="text-align:left;padding-left:100px">
+                                                        Billed To : <br><br>
+                                                        <input type="text" placeholder="Enter Your Last Name"><br>
+                                                        <input type="text" placeholder="Enter Your First Name"><br>
+                                                        <input type="text" placeholder="City,State,Country"><br>
+                                                        <input type="text" placeholder="ZIP Code">
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="billEle">
+
+                                        <p style="text-align:left;margin: 0 auto;padding-bottom: 6px;">
+                                            Invoice Number: <br><br>
+                                            <input type="text" placeholder="Invoice Number"><br><br>
+                                        </p>
+                                        <p style="text-align:left;margin: 0 auto;">
+                                            Issue Date: <br>
+                                            <input type="date" id="datePick">
+                                        </p>
+                                    </td>
+                                    <td class="billEle">
+                                        <table align="right">
+                                            <tr>
+                                                <td style="margin:0 auto;position: static;
+                                                padding-right: 35px;">
+                                                    <p style="margin: 0 auto;">
+                                                        Invoice Total
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="margin: 0 auto;height: 50px;">
+                                                    <p>
+                                                        <output id="invTot" style="font-size: 20px;"></output>
+                                                    </p>                                                    
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr style="background-image: radial-gradient(circle, red, white);height: 2px;width: 900px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="billitemsHead" id="billItem" style="width: 900px; width: 100%;">
+                                <tr class="billItemsRow">
+                                    <td class="billItemDes">
+                                        <p style="text-align: left;">
+                                            Description
+                                        </p>
+                                    </td>
+                                    <td class="billItem1u">
+                                        <p style="padding-left: 55px;text-align: right;">
+                                            Unit cost
+                                        </p>
+                                    </td>
+                                    <td class="billItem1q">
+                                        <p style="text-align:center;">
+                                            Qty/Hr State
+                                        </p>
+                                    </td>
+                                    <td class="billItem1a">
+                                        <p style="padding-right: 44px;text-align: right;">
+                                            Amount
+                                        </p>
+                                    </td>
+                                </tr>
+                    </tr>
+                    <!-- <tr style="border-bottom: 1px solid rgb(175, 174, 174)">
+                                    <td class="billItemEle" style="width: 40%">
+                                        <p style="padding-left: 100px;text-align: left;">
+                                            Item1
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="padding-left: 55px;text-align: right;">
+                                            <input type="text" id="uc1" style="width:150px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="text-align:right;padding-right: 15px;">
+                                            <input id=demoInput type=number min=1 max=100
+                                                style="width:50px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center;">
+                                        <p style="padding-right: 44px;text-align: right;">
+                                            <output type="text" id="am1" style="width:150px;height: 20px;">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr
+                                    style="border-bottom: 1px solid rgb(175, 174, 174)">
+                                    <td class="billItemEle" style="width: 40%;">
+                                        <p style="padding-left: 100px;text-align: left;">
+                                            Item1
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="padding-left: 55px;text-align: right;">
+                                            <input type="text" id="uc2" style="width:150px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="text-align:right;padding-right: 15px;">
+                                            <input id=demoInput1 type=number min=1 max=100
+                                                style="width:50px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center;">
+                                        <p style="padding-right: 44px;text-align: right;">
+                                            <output type="text" id="am2" style="width:150px;height: 20px">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="billItemEle" style="width: 40%;">
+                                        <p style="padding-left: 100px;text-align: left;">
+                                            Item1
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="padding-left: 55px;text-align: right;">
+                                            <input type="text" id="uc3" style="width:150px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center">
+                                        <p style="text-align:right;padding-right: 15px;">
+                                            <input id=demoInput2 type=number min=1 max=100
+                                                style="width:50px;height: 20px;">
+                                        </p>
+                                    </td>
+                                    <td class="billItemEle" style="width: 20%; text-align:center;">
+                                        <p style="padding-right: 44px;text-align: right;">
+                                            <output type="text" name="" id="am3" style="width:150px;height: 20px;">
+                                        </p>
+                                    </td>
+                                </tr> -->
+                </table>
+                <table>
+                    <tr class="buttons">
+                        <table align="center">
+                            <tr>
+                                <td>
+                                    <button id="addRow"
+                                        style="width: 27px;font-size:17px;border-color: #efefef; border-radius: 25%;;">
+                                        +
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button id="remRow" style="border-color: #efefef; border-radius: 25%;">
+                                        <i style="font-size:18px" class="fa">&#xf014;</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                </table>
+                <hr style="background-image: radial-gradient(circle, red,white);height: 2px;width: 900px;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="footer" style="padding-left: 100px; width: 100%;">
+                    <tr>
+                        <td style="width: 460px;">
+                            <p>
+                                Invoice Terms</p>
+                        </td>
+                        <td style="padding-top: 20px;padding-right: 10px;">
+                            <table class="footer1">
+                                <tr class="r1" style="margin:0 auto;">
+                                    <td>
+                                        <p id="">
+                                            SubTotal
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            =
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p id="">
+                                            Tax
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            =
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 26px;">
+                                        <p id="">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p id="">
+                                            Tax
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            =
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p id="">
+                                            Net Amount
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            =
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <table>
+                                <tr class="r2" style="margin: 0 auto;">
+                                    <td style="padding: 33px 0px;">
+                                        <input type="text" name="" id="subT" placeholder="Sub Total">
+                                    </td>
+                                </tr>
+                                <tr style="margin: 0 auto;">
+                                    <td style="padding-bottom: 26px;">
+                                        <select name="" id="taxSelector" style="width: 170px;height:21px">
+                                            <option value="0%">Select Tax Percent</option>
+                                            <option value="0%">0%</option>
+                                            <option value="5%">5%</option>
+                                            <option value="12%">12%</option>
+                                            <option value="18%">18%</option>
+                                            <option value="28%">28%</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 25px;text-align:right">
+                                        <button value="submit" id="btn">Calculate</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 30px;">
+                                        <input type="text" name="" id="tot" placeholder="Tax Amount">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="" id="netAm" placeholder="Net Amount">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table align="center" style="padding-left: 240px;">
+                                <tr>
+                                    <td>
+                                        <button id="print">Print</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </td>
+    </tr>
+
+    </table>
+
+</body>
+<script src="invoice.js"></script>
+
+</html>

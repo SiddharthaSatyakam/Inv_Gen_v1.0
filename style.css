@@ -1,6 +1,10 @@
+@media print{
+    .buttn{
+        visibility: hidden;
+    }
+}
 .center {
     margin: 0 auto;
-    /* border-collapse: collapse; */
     font-family: calibri,arial; border-style: solid;border-color: rgb(255,0,0,1);width: 50%;max-width: 900px;
 }
 
@@ -13,8 +17,6 @@
 
 .center .header .row1 {
     margin: 0px auto;
-    /* display: flex;
-    flex-direction: row; */
 }
 
 .center .header .row1 .headEle {
@@ -22,8 +24,12 @@
     text-align: center;
 }
 
+.center .header .row1 .headEle h1{
+    font-size:50px; width: 45%;
+}
+
 .center .billDet {
-    width: 600px;
+    width: 100%;
 }
 
 .center .billDet .billEle {
@@ -31,10 +37,17 @@
     text-align: center;
 }
 
+.center .billDet .billEle p{
+    text-align: left;
+}
+
 .center .billEle .billItemEle {
     width: 300px;
 }
 
+.center .rem .twoDivs{
+    background-image: radial-gradient(circle, red, white);height: 2px;width: 900px;
+}
 .center .rem .billitemsHead tr{
     border-bottom: 1px solid rgb(175, 174, 174);
 }
@@ -50,8 +63,7 @@
 }
 
 .center .rem .billitemsHead .buttons{
-    text-align: right;
-    
+    text-align: right; 
 }
 
 #desc{
@@ -72,9 +84,6 @@
 
 #remain1{
     text-align: center;
-    /* padding-right: 15px; */
-    /* padding-left: 32px;
-    width: 0px; */
     width: 20%;
 }
 
@@ -83,10 +92,7 @@
     text-align: right;
 }
 
-/* .ele4{
-    padding-right: 44px;
-    text-align: right;
-} */
+
 
 #xyz{
     width: 20%;
@@ -97,23 +103,3 @@
 .billItem1a{
     width: 84%;
 }
-/* .ele1{
-    width: 40%;
-    padding-left: 100px;
-} */
-
-/* .ele2{
-    width: 20%;
-    text-align: center;
-} */
-
-/* .ele3
-{
-    width: 20%;
-    text-align: center;
-}
-
-.ele4{
-    width: 20%;
-    text-align: center;
-} */

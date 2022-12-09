@@ -85,9 +85,6 @@ $(document).ready(function () {
 
     document.getElementById("print").addEventListener('click',print);
     function print(){
-        document.getElementById("addRow").style.visibility='hidden';
-        document.getElementById("remRow").style.visibility='hidden';
-        document.getElementById("btn").style.visibility='hidden';
         window.print();
     }
 

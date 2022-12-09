@@ -18,7 +18,7 @@
                 <table class="header">
                     <tr class="row1">
                         <td class="headEle" align="left">
-                            <h1 style="font-size:50px; width: 45%;">
+                            <h1>
                                 Invoice
                             </h1>
                         </td>
@@ -42,16 +42,16 @@
         </tr>
         <tr>
             <td>
-                <table class="rem" style="width:0%;">
+                <table class="rem">
                     <tr>
                         <td>
-                            <table class="billDet" style="width: 100%;">
+                            <table class="billDet">
                                 <tr style="margin: 0;">
                                     <td class="billEle">
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <p style="text-align:left;padding-left:100px">
+                                                    <p style="padding-left:100px">
                                                         Billed To : <br><br>
                                                         <input type="text" placeholder="Enter Your Last Name"><br>
                                                         <input type="text" placeholder="Enter Your First Name"><br>
@@ -64,11 +64,11 @@
                                     </td>
                                     <td class="billEle">
 
-                                        <p style="text-align:left;margin: 0 auto;padding-bottom: 6px;">
+                                        <p style="margin: 0 auto;padding-bottom: 6px;">
                                             Invoice Number: <br><br>
                                             <input type="text" placeholder="Invoice Number"><br><br>
                                         </p>
-                                        <p style="text-align:left;margin: 0 auto;">
+                                        <p style="margin: 0 auto;">
                                             Issue Date: <br>
                                             <input type="date" id="datePick">
                                         </p>
@@ -87,14 +87,14 @@
                                                 <td style="margin: 0 auto;height: 50px;">
                                                     <p>
                                                         <output id="invTot" style="font-size: 20px;"></output>
-                                                    </p>                                                    
+                                                    </p>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                             </table>
-                            <hr style="background-image: radial-gradient(circle, red, white);height: 2px;width: 900px;">
+                            <hr class="twoDivs">
                         </td>
                     </tr>
                     <tr>
@@ -122,139 +122,145 @@
                                         </p>
                                     </td>
                                 </tr>
-                    </tr>
-                </table>
-                <table>
-                    <tr class="buttons">
-                        <table align="center">
-                            <tr>
-                                <td>
-                                    <button id="addRow"
-                                        style="width: 27px;font-size:17px;border-color: #efefef; border-radius: 25%;;">
-                                        +
-                                    </button>
-                                </td>
-
-                                <td>
-                                    <button id="remRow" style="border-color: #efefef; border-radius: 25%;">
-                                        <i style="font-size:18px" class="fa">&#xf014;</i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </table>
-                </table>
-                <hr style="background-image: radial-gradient(circle, red,white);height: 2px;width: 900px;">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table class="footer" style="padding-left: 100px; width: 100%;">
-                    <tr>
-                        <td style="width: 460px;">
-                            <p>
-                                Invoice Terms</p>
-                        </td>
-                        <td style="padding-top: 20px;padding-right: 10px;">
-                            <table class="footer1">
-                                <tr class="r1" style="margin:0 auto;">
-                                    <td>
-                                        <p id="">
-                                            SubTotal
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>
-                                            =
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p id="">
-                                            Tax
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>
-                                            =
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 26px;">
-                                        <p id="">
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p id="">
-                                            Tax Amount
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>
-                                            =
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p id="">
-                                            Net Amount
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>
-                                            =
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <table>
-                                <tr class="r2" style="margin: 0 auto;">
-                                    <td style="padding: 33px 0px;">
-                                        <input type="text" name="" id="subT" placeholder="Sub Total">
-                                    </td>
-                                </tr>
-                                <tr style="margin: 0 auto;">
-                                    <td style="padding-bottom: 26px;">
-                                        <select name="" id="taxSelector" style="width: 170px;height:21px">
-                                            <option value="0%">Select Tax Percent</option>
-                                            <option value="0%">0%</option>
-                                            <option value="5%">5%</option>
-                                            <option value="12%">12%</option>
-                                            <option value="18%">18%</option>
-                                            <option value="28%">28%</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 25px;text-align:right">
-                                        <button value="submit" id="btn">Calculate</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 30px;">
-                                        <input type="text" name="" id="tot" placeholder="Tax Amount">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="text" name="" id="netAm" placeholder="Net Amount">
-                                    </td>
-                                </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <table align="center" style="padding-left: 240px;">
+                            <table>
+                                <tr class="buttons">
+                                    <table align="center">
+                                        <tr>
+                                            <td>
+                                                <button class="buttn" id="addRow"
+                                                    style="width: 27px;font-size:17px;border-color: #efefef; border-radius: 25%;;">
+                                                    +
+                                                </button>
+                                            </td>
+        
+                                            <td>
+                                                <button class="buttn" id="remRow" style="border-color: #efefef; border-radius: 25%;">
+                                                    <i style="font-size:18px" class="fa">&#xf014;</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </table>
+                            <hr style="background-image: radial-gradient(circle, red,white);height: 2px;width: 900px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="footer" style="padding-left: 100px; width: 100%;">
+                                <tr>
+                                    <td style="width: 460px;">
+                                        <p>
+                                            Invoice Terms</p>
+                                    </td>
+                                    <td style="padding-top: 20px;padding-right: 10px;">
+                                        <table class="footer1">
+                                            <tr class="r1" style="margin:0 auto;">
+                                                <td>
+                                                    <p>
+                                                        SubTotal
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        =
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        Tax
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        =
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 26px;">
+                                                    <p>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        Tax Amount
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        =
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        Net Amount
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        =
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                        <table>
+                                            <tr class="r2" style="margin: 0 auto;">
+                                                <td style="padding: 33px 0px;">
+                                                    <input type="text" name="" id="subT" placeholder="Sub Total">
+                                                </td>
+                                            </tr>
+                                            <tr style="margin: 0 auto;">
+                                                <td style="padding-bottom: 26px;">
+                                                    <select name="" id="taxSelector" style="width: 170px;height:21px">
+                                                        <option value="0%">Select Tax Percent</option>
+                                                        <option value="0%">0%</option>
+                                                        <option value="5%">5%</option>
+                                                        <option value="12%">12%</option>
+                                                        <option value="18%">18%</option>
+                                                        <option value="28%">28%</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 25px;text-align:right">
+                                                    <button class="buttn" value="submit" id="btn">Calculate</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 30px;">
+                                                    <input type="text" name="" id="tot" placeholder="Tax Amount">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" name="" id="netAm" placeholder="Net Amount">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>
-                                        <button id="print">Print</button>
+                                        <table align="center" style="padding-left: 240px;">
+                                            <tr>
+                                                <td>
+                                                    <button class="buttn" id="print">Print</button>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                             </table>
@@ -264,12 +270,6 @@
             </td>
         </tr>
     </table>
-    </td>
-    </tr>
-
-    </table>
-
 </body>
 <script src="invoice.js"></script>
-
 </html>

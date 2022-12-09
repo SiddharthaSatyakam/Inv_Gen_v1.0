@@ -1,11 +1,11 @@
 .center {
     margin: 0 auto;
     /* border-collapse: collapse; */
-    font-family: calibri,arial; border-style: solid;border-color: rgb(197, 104, 104);width: 50%;max-width: 900px;
+    font-family: calibri,arial; border-style: solid;border-color: rgb(255,0,0,1);width: 50%;max-width: 900px;
 }
 
 .center .header{
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255,0,0,1));
     color: white; 
     margin: 0px;width: 100%;
     text-transform:uppercase
